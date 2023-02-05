@@ -29,4 +29,16 @@
       userEmail = "claytoneasley77@gmail.com";
     };
    }; 
+  sound.enable = true;
+  services.xserver = {
+    layout = "us";
+    libinput.enable = true;
+    enable = true;
+    desktopManager.plasma5.enable = true;
+    displayManager.sddm = {
+      enable = true;
+      autoNumlock = true;
+    };
+  };
+
 }
