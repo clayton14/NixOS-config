@@ -23,5 +23,10 @@
   home-manager.users.clay = {pkgs, ... }: 
    {
     home.stateVersion = config.system.stateVersion;
+    programs.git = {
+      enable = true;
+      userName = "clayton14";
+      userEmail = "claytoneasley77@gmail.com";
+    };
    }; 
 }
