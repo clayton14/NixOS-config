@@ -2,6 +2,7 @@
 
 {
   nixpkgs.config.allowUnfree = true;
+  imports = [./home-manager/22.11.nix];
   
   console = {
     packages = [pkgs.terminus_font];
@@ -19,4 +20,8 @@
       pkgs.neovim
     ];
   };
+  home-manager.users.clay = {pkgs, ... }: 
+   {
+    home.stateVersion = config.system.stateVersion;
+   }; 
 }
