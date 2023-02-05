@@ -20,6 +20,7 @@
       pkgs.neovim
     ];
   };
+
   home-manager.users.clay = {pkgs, ... }: 
    {
     home.stateVersion = config.system.stateVersion;
@@ -29,6 +30,7 @@
       userEmail = "claytoneasley77@gmail.com";
     };
    }; 
+
   sound.enable = true;
   services.xserver = {
     layout = "us";
