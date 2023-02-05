@@ -16,14 +16,16 @@
   users.users.clay = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    packages = [
-      pkgs.neovim
-    ];
   };
 
   home-manager.users.clay = {pkgs, ... }: 
    {
     home.stateVersion = config.system.stateVersion;
+############PACKAGES############
+    home.packages = [
+      pkgs.neovim
+    ];
+################################
     programs.git = {
       enable = true;
       userName = "clayton14";
