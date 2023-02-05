@@ -22,8 +22,9 @@
    {
     home.stateVersion = config.system.stateVersion;
 ############PACKAGES############
-    home.packages = [
-      pkgs.neovim
+    home.packages = with pkgs;[
+      neovim
+      firefox
     ];
 ################################
     programs.git = {
