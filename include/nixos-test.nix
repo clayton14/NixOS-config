@@ -21,12 +21,21 @@
   home-manager.users.clay = {pkgs, ... }: 
    {
     home.stateVersion = config.system.stateVersion;
-############PACKAGES############
+  ############PACKAGES############
     home.packages = with pkgs;[
       neovim
       firefox
+      zsh
+      oh-my-zsh
+      python311
+      thunderbird
+      zulu8
+      nmap
+      go
+      blender
+
     ];
-################################
+  ################################
     programs.git = {
       enable = true;
       userName = "clayton14";
