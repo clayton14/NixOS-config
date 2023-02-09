@@ -33,7 +33,8 @@
       nmap
       go
       blender
-
+      yakuake
+      
     ];
   ################################
     programs.git = {
@@ -44,6 +45,7 @@
    }; 
 
   sound.enable = true;
+  hardware.pulseaudio.enable = true;
   services.xserver = {
     layout = "us";
     libinput.enable = true;
