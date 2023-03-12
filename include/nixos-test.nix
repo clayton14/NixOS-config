@@ -14,6 +14,10 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   users.users.clay = {
+    #unfree packages
+    packages = [
+	pkgs.discord
+    ];
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   };
@@ -33,7 +37,8 @@
       nmap
       go
       blender
-      yakuake
+      yakuake     
+      pre-commit
       
     ];
   ################################
