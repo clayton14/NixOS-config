@@ -2,7 +2,7 @@
 
 {
   nixpkgs.config.allowUnfree = true;
-  imports = [./home-manager/22.11.nix];
+  imports = [./home-manager/23.05.nix];
   
   console = {
     packages = [pkgs.terminus_font];
