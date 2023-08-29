@@ -8,6 +8,12 @@
     packages = [pkgs.terminus_font];
     font = "${pkgs.terminus_font}/share/consolefonts/ter-132n.psf.gz";
   };
+
+  systemd.services."serial-getty@ttyS0" = {
+	enable = true;
+	wantedBy = ["getty.target"];
+	serviceConfig.Restart = "always";
+  };
   networking.hostName = "nixos-test";
   networking.networkmanager.enable = true;
   time.timeZone = "America/New_York";
