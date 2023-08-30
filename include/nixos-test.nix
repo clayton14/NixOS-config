@@ -8,7 +8,10 @@
     packages = [pkgs.terminus_font];
     font = "${pkgs.terminus_font}/share/consolefonts/ter-132n.psf.gz";
   };
-
+  #enable flatpaks
+  services.flatpak.enable = true;
+ # xdg.portal.exraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  #enable serial console
   systemd.services."serial-getty@ttyS0" = {
 	enable = true;
 	wantedBy = ["getty.target"];
@@ -22,8 +25,8 @@
   users.users.clay = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  };
-
+    
+    };
   home-manager.users.clay = {pkgs, ... }: 
    {
     home.stateVersion = config.system.stateVersion;
@@ -39,7 +42,7 @@
       nmap
       go
       blender
-      yakuake
+      flatpak
       
     ];
   ################################
